@@ -17,7 +17,6 @@ export default class MovieList extends React.Component {
         console.error('Server Error', error);
       });
   }
-  F;
 
   render() {
     return (
