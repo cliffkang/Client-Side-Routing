@@ -1,12 +1,10 @@
-import React from 'react';
-import axios from 'axios';
-import MovieList from './MovieList';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import React from "react";
+import axios from "axios";
+import { Link } from "react-router-dom";
 
 export default class MovieCard extends React.Component {
-  
   state = {
-    movie: null,
+    movie: null
   };
 
   componentDidMount() {
@@ -21,8 +19,8 @@ export default class MovieCard extends React.Component {
   }
 
   render() {
-    if(!this.state.movie) {
-      return <div>Loading movie information...</div>
+    if (!this.state.movie) {
+      return <div>Loading movie information...</div>;
     }
 
     const { title, director, metascore, stars } = this.state.movie;
@@ -42,12 +40,18 @@ export default class MovieCard extends React.Component {
             {star}
           </div>
         ))}
-        <Router>
-          <div>
-            <Link to='/' component={MovieList}>Home</Link>
-            {/* <Route path='/' component={MovieList} /> */}
-          </div>
-        </Router>
+        {/* <ul>
+          <li>
+            <Link to="/" exact>
+              Click here to go back home
+            </Link>
+          </li>
+        </ul> */}
+        <div>
+          <Link to="/" exact>
+            Home
+          </Link>
+        </div>
       </div>
     );
   }
