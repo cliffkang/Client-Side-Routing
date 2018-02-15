@@ -40,7 +40,7 @@ export default class MovieCard extends React.Component {
             {star}
           </div>
         ))}
-        {/* <ul>
+        {/* <ul> (works when using the 'import { BrowserRouter as Link } froom 'react-router-dom'; statement, while below doesn't)
           <li>
             <Link to="/" exact>
               Click here to go back home
